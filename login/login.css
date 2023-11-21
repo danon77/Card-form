@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label__title {
+    font-weight: 600;
+}
+
+.number {
+    width: 450px;
+    height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    background: #fff;
+    border: solid rgb(0, 145, 235) 2px;
+}
+
+.email {
+    width: 450px;
+    height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    background: #fff;
+    border: solid rgb(0, 145, 235) 2px;
+}
+
+.password {
+    width: 450px;
+    height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    background: #fff;
+    border: solid rgb(0, 145, 235) 2px;
+}
+
+.number.delate {
+    box-shadow: 0 0 6px rgb(207, 0, 0);
+    transition: 0.4s;
+}
+
+.email.delate {
+    box-shadow: 0 0 6px rgb(207, 0, 0);
+    transition: 0.4s;
+}
+
+.password.delate {
+    box-shadow: 0 0 6px rgb(207, 0, 0);
+    transition: 0.4s;
+}
+
+.button {
+    width: 450px;
+    height: 45px;
+    background: linear-gradient(70deg, rgb(0, 145, 235), rgba(0, 243, 141, 1));
+    border: none;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 17px;
+}
+
+.button:hover {
+    background: linear-gradient(70deg, rgb(0, 142, 230), rgb(0, 221, 129));
+}
+
+.check {
+    position: relative;
+}
+
+.checkbox__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.checkbox {
+    width: 15px;
+    height: 15px;
+}
+
+.check__politic {
+    font-size: 16px;
+}
+
+.model {
+    position: absolute;
+    width: 400px;
+    left: -1000px;
+    transition: 0.5s;
+}
+
+.model.active {
+    left: 0;
+}

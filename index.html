@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="our__logo">
+            <img src="./icon.png" alt="" class="logo">
+            <h1 class="title__name">PolyBank</h1>
+        </div>
+
+        <nav class="header__navigation">
+            <ul>
+                <li><a href="" class="link">Про нас</a></li>
+                <li><a href="" class="link">Як отримати?</a></li>
+                <li><a href="" class="link">Акції</a></li>
+                <li><a href="" class="link">Допомога</a></li>
+                <li><a href="" class="link">Послуги</a></li>
+            </ul>
+        </nav>
+
+        <div class="our__contacts">
+            <div class="our__number">+380 12 345 67 89</div>
+            <div class="our__email">scam777@gmail.com</div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="form">
+
+            <form action="">
+                <label for="name">Ваше ім'я:</label>
+                <input type="text" id="name" class="name__input">
+            </form>
+
+            <form action="">
+                <label for="surname">Ваше прізвище:</label>
+                <input type="text" id="surname" class="surname__input">
+            </form>
+
+            <form action="">
+                <label for="date">Дата видачі:</label>
+                <input type="date" id="date" class="date__input">
+            </form>
+
+            <button class="card__number__button">Сгенерувати номер картки</button>
+            <button class="cvv__button">Сгенерувати CVV код</button>
+
+            <button class="button">Отримати карту</button>
+        </div>
+
+        <div class="block">
+
+            <div class="block__title">
+                <p class="block__text">Credit card</p>
+                <p class="block__text">PolyBank</p>
+            </div>
+
+            <img src="./card.png" alt="" class="block__photo">
+
+            <div class="number__area">
+                <p class="card__number"></p>
+            </div>
+
+            <div class="card__container">
+                <p class="card__cvv"></p>
+                <p class="card__year"></p>
+            </div>
+
+            <div class="name__area">
+                <span class="name"></span>
+                <span class="surname"></span>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
