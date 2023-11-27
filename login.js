@@ -31,7 +31,7 @@ loginButton.addEventListener("click", function() {
         emailArea.classList.add("delate");
         passwordArea.classList.add("delate");
     } else {
-        window.location.href = "../index.html"
+        window.location.href = "form/index.html"
     }
 });
 
