@@ -4,12 +4,40 @@
     box-sizing: border-box;
 }
 
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 65px;
+    right: -100%;
+    width: 220px;
+    height: 75px;
+    background: linear-gradient(70deg, rgb(0, 145, 235), rgba(0, 243, 141, 1));
+    transition: 0.8s;
+}
+
+.alert.active {
+    right: 0;
+}
+
+.alert__text {
+    text-align: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+}
+
 .login {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 15px;
+    gap: 17px;
     width: 100%;
     height: 100vh;
     font-family: 'Inter', sans-serif;
@@ -22,6 +50,15 @@ form {
 
 .label__title {
     font-weight: 600;
+}
+
+.name {
+    width: 450px;
+    height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    background: #fff;
+    border: solid rgb(0, 145, 235) 2px;
 }
 
 .number {
@@ -51,19 +88,13 @@ form {
     border: solid rgb(0, 145, 235) 2px;
 }
 
-.number.delate {
-    box-shadow: 0 0 6px rgb(207, 0, 0);
-    transition: 0.4s;
+.correct {
+    transition: 0.8s;
 }
 
-.email.delate {
+.incorrect {
     box-shadow: 0 0 6px rgb(207, 0, 0);
-    transition: 0.4s;
-}
-
-.password.delate {
-    box-shadow: 0 0 6px rgb(207, 0, 0);
-    transition: 0.4s;
+    transition: 0.8s;
 }
 
 .button {

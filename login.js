@@ -1,39 +1,105 @@
-/*let password = document.querySelector(".password");
+//Ім'я
+let nameArea = document.querySelector(".name");
 
-password.addEventListener("input", function() {
-    let passwordValue = password.value;
+nameArea.addEventListener("input", function() {
+    let nameValue = nameArea.value;
 
-    if(passwordValue.length >= 8) {
-        password.classList.add("new");
-        password.classList.remove("delate");
-    } else if(passwordValue.length === 0) {
-        password.classList.remove("new");
-        password.classList.remove("delate");
+    if(nameValue.length > 0) {
+        nameArea.classList.remove("incorrect");
+        nameArea.classList.add("correct");
+    } else if(nameValue.length === 0) {
+        nameArea.classList.remove("correct");
+        nameArea.classList.remove("incorrect");
     } else {
-        password.classList.remove("new");
-        password.classList.add("delate");
-    }
-});*/
-
-let loginButton = document.querySelector(".button");
-
-let numberArea = document.querySelector(".number");
-let emailArea = document.querySelector(".email");
-let passwordArea = document.querySelector(".password")
-
-loginButton.addEventListener("click", function() {
-    let numberValue = numberArea.value;
-    let emailValue = emailArea.value;
-    let passwordValue = passwordArea.value;
-
-    if(numberValue.length == 0 || emailValue.length == 0 || passwordValue.length == 0) {
-        numberArea.classList.add("delate");
-        emailArea.classList.add("delate");
-        passwordArea.classList.add("delate");
-    } else {
-        window.location.href = "form/index.html"
+        nameArea.classList.remove("correct");
+        nameArea.classList.add("incorrect");
     }
 });
+
+
+
+//Номер
+let numberArea = document.querySelector(".number");
+
+numberArea.addEventListener("input", function() {
+    let numberValue = numberArea.value;
+
+    if(numberValue.includes("+380") && numberValue.length === 13) {
+        numberArea.classList.remove("incorrect");
+        numberArea.classList.add("correct");
+    } else if(numberValue.length === 0) {
+        numberArea.classList.remove("correct");
+        numberArea.classList.remove("incorrect");
+    } else {
+        numberArea.classList.remove("correct");
+        numberArea.classList.add("incorrect");
+    }
+});
+
+
+
+//Пошта
+let emailArea = document.querySelector(".email");
+
+emailArea.addEventListener("input", function() {
+    let emailValue = emailArea.value;
+
+    if(emailValue.includes("@gmail.com")) {
+        emailArea.classList.remove("incorrect");
+        emailArea.classList.add("correct");
+    } else if(emailValue.length === 0) {
+        emailArea.classList.remove("correct");
+        emailArea.classList.remove("incorrect");
+    } else {
+        emailArea.classList.remove("correct");
+        emailArea.classList.add("incorrect");
+    }
+});
+
+
+
+//Пароль
+let passwordArea = document.querySelector(".password");
+
+passwordArea.addEventListener("input", function() {
+    let passwordValue = passwordArea.value;
+
+    if (passwordValue.length >= 8) {
+        passwordArea.classList.remove("incorrect");
+        passwordArea.classList.add("correct");
+    } else if(passwordValue.length === 0) {
+        passwordArea.classList.remove("correct");
+        passwordArea.classList.remove("incorrect");
+    } else {
+        passwordArea.classList.remove("correct");
+        passwordArea.classList.add("incorrect");
+    }
+});
+
+
+
+//Кнопка
+let checkButton = document.querySelector(".button");
+
+checkButton.addEventListener("click", function() {
+    let alertWin = document.querySelector(".alert");
+
+    if(nameArea.classList.contains("correct") && numberArea.classList.contains("correct") && emailArea.classList.contains("correct") && passwordArea.classList.contains("correct")) {
+        window.location.href = "form/index.html"
+    } else {
+        nameArea.classList.add("incorrect");
+        numberArea.classList.add("incorrect");
+        emailArea.classList.add("incorrect");
+        passwordArea.classList.add("incorrect");
+        alertWin.classList.add("active");
+
+        setTimeout(function() {
+            alertWin.classList.remove("active");
+        }, 3000);
+    }
+});
+
+
 
 //Модальне вікно
 let linkModel = document.querySelector(".politics__link");
