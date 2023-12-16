@@ -1,3 +1,13 @@
+window.addEventListener("scroll", function() {
+    let gif = document.querySelector(".gif")
+
+    if(scrollY > 250) {
+        gif.classList.add("new")
+    } else {
+        gif.classList.remove("new")
+    }
+})
+
 //Номер карти
 let numberArea = document.querySelector(".card__number");
 let myNumber = document.querySelector(".card__number__button");

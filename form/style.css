@@ -200,7 +200,7 @@ input {
 
 
 
-@media(max-width: 1024px) {
+@media(max-width: 1199px) {
     .header {
         width: 1024px;
         height: 70px;
@@ -269,4 +269,22 @@ input {
     }
     .surname {
     }
+}
+
+
+
+@media (max-width: 991px) {
+
+}
+
+
+
+@media (max-width: 767px) {
+
+}
+
+
+
+@media (max-width: 575px) {
+    
 }

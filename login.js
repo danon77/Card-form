@@ -87,10 +87,6 @@ checkButton.addEventListener("click", function() {
     if(nameArea.classList.contains("correct") && numberArea.classList.contains("correct") && emailArea.classList.contains("correct") && passwordArea.classList.contains("correct")) {
         window.location.href = "form/index.html"
     } else {
-        nameArea.classList.add("incorrect");
-        numberArea.classList.add("incorrect");
-        emailArea.classList.add("incorrect");
-        passwordArea.classList.add("incorrect");
         alertWin.classList.add("active");
 
         setTimeout(function() {
